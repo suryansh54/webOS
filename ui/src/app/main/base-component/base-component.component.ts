@@ -24,7 +24,8 @@ export class BaseComponentComponent implements OnInit {
     'Early modern period',
     'Long nineteenth century'
   ];
-
+ 
+  
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.timePeriods, event.previousIndex, event.currentIndex);
   }
