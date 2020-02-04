@@ -1,0 +1,19 @@
+<div class="webos-wrapper">
+    <div class="webos-fixed-area">
+        <div class="webos-items"><a class="webos-all-items"><i class="fas fa-box"></i></a></div>
+        <div class="webos-active-items">
+            <div cdkDropList cdkDropListOrientation="horizontal" class="example-list"
+                (cdkDropListDropped)="drop($event)">
+                <div cdkDragLockAxis="x" class="example-box" *ngFor="let timePeriod of timePeriods" cdkDrag>{{timePeriod}}</div>
+            </div>
+        </div>
+        <div class="webos-more-area">
+            <div class="webos-date-and-time-area">
+                <a>{{mydate | amLocal | amDateFormat: 'HH:mm:ss' }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="webos-drag-area">
+        <div class="bg-image" style="background-image: url('./assets/defaulf_bg.jpg');"></div>
+    </div>
+</div>
